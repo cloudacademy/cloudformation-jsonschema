@@ -114,11 +114,43 @@
                     "$ref": "#/definitions/functions/Fn::Select"
                 },
                 {
+                    "$ref": "#/definitions/functions/Fn::Sub"
+                },
+                {
                     "$ref": "#/definitions/functions/Ref"
                 }
             ]
         },
         "functions": {
+            "Fn::Sub": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "Fn::Sub": {
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "minItems": 2,
+                                "maxItems": 2,
+                                "items": {
+                                    "oneOf": [
+                                        {
+                                            "type": "string"
+                                        },
+                                        {
+                                            "type": "object"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                "required": ["Fn::Sub"]
+            },
             "Fn::Base64": {
                 "type": "object",
                 "additionalProperties": false,
