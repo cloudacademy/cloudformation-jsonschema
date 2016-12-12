@@ -58,6 +58,7 @@ You can then scrape AWS documentation for cloudformation resource types and save
   - [x] Fn::GetAtt
   - [x] Fn::GetAZs
   - [x] Fn::Join
+  - [x] Fn::Sub
   - [x] Fn::Select
   - [x] Ref
   - [x] number
